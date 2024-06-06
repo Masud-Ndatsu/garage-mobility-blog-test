@@ -12,8 +12,8 @@ const validateCreatePostSchema = (postReq) => {
 
 const validateUpdatePostSchema = (postReq) => {
      const updatePostSchema = Joi.object({
-          title: Joi.string(),
-          content: Joi.string(),
+          title: Joi.string().optional(),
+          content: Joi.string().optional(),
      });
 
      return updatePostSchema.validate(postReq);
